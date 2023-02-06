@@ -1,7 +1,7 @@
 package payment
-import(
+import (
 	"fmt"
-	"bank/pkg/bank/types"	
+	"github.com/Alexandr-Lvov/bank/pkg/bank/types"	
 )
 func ExampleMax() {
 	payments:=[]types.Payment{
