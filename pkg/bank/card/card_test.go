@@ -21,7 +21,7 @@ func ExampleDeposit_noActive() {
 
 	fmt.Println(card.Balance)
 
-	// Output: 3000000
+	// Output: 2000000
 
 }
 
@@ -31,7 +31,7 @@ func ExampleDeposit_unlimit() {
 
 	fmt.Println(card.Balance)
 
-	// Output: 3000000
+	// Output: 2000000
 
 }
 
@@ -49,7 +49,7 @@ func ExampleAddBonus_noActive() {
 	AddBonus(&card, 3, 30, 365)
 
 	fmt.Println(card.Balance)
-	// Output: 2004931
+	// Output: 2000000
 }
 
 func ExampleAddBonus_negative() {
@@ -57,7 +57,7 @@ func ExampleAddBonus_negative() {
 	AddBonus(&card, 3, 30, 365)
 
 	fmt.Println(card.Balance)
-	// Output: 2004931
+	// Output: -200000
 }
 
 func ExampleAddBonus_maxBonus() {
@@ -65,7 +65,7 @@ func ExampleAddBonus_maxBonus() {
 	AddBonus(&card, 3, 30, 365)
 
 	fmt.Println(card.Balance)
-	// Output: 2004931
+	// Output: 300500000
 }
 
 func ExampleTotal() {
@@ -82,6 +82,6 @@ func ExampleTotal() {
 	}	
 
 	fmt.Println(Total(cards))
-	//Output: 2000001
+	//Output: 2000000
 	
 }

@@ -17,20 +17,20 @@ func ExampleWithdraw_noMoney() {
 	result := Withdraw(types.Card{Balance: 0, Active: true}, 10_000_00)
 	fmt.Println(result.Balance)
 
-	// Output: 1000000
+	// Output: 0
 
 }
 func ExampleWithdraw_inactive() {
 	result := Withdraw(types.Card{Balance: 20_000_00, Active: false}, 10_000_00)
 	fmt.Println(result.Balance)
 
-	// Output: 1000000
+	// Output: 2000000
 
 }
 func ExampleWithdraw_limit() {
 	result := Withdraw(types.Card{Balance: 20_000_00, Active: true}, 30_000_00)
 	fmt.Println(result.Balance)
 
-	// Output: 1000000
+	// Output: 2000000
 
 }
