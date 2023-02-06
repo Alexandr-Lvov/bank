@@ -15,3 +15,26 @@ func Max(payments []types.Payment)types.Payment{
 	
 	return max
 }
+
+func PaymentSources(cards []types.Card) []types.PaymentSource {
+	result := make([]types.PaymentSource, 0, len(cards))
+
+	for _, card := range cards {
+		if !card.Active {
+			continue
+		}
+		if card.Balance <= 0 {
+			continue
+		}
+
+		
+		paySource := types.PaymentSource{
+			Type:    card.Name,
+			Number:  string(card.PAN),
+			Balance: card.Balance,
+		}
+		result = append(result, paySource)
+	}
+
+	return result
+}
